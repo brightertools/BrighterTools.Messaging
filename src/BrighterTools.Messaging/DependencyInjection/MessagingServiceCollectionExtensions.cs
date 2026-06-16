@@ -1,5 +1,6 @@
 ﻿using BrighterTools.Messaging.Options;
 using BrighterTools.Messaging.Services;
+using BrighterTools.Messaging.Templates.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -20,6 +21,10 @@ public static class MessagingServiceCollectionExtensions
         services.AddScoped<ITemplateRenderer, TemplateRenderer>();
         services.AddScoped<ISystemEmailTemplateService, SystemEmailTemplateService>();
         services.AddScoped<INotificationMessageService, NotificationMessageService>();
+        services.AddScoped<IMessageTemplateSeedService, MessageTemplateSeedService>();
+        services.AddScoped<IMessageTemplateResolver, MessageTemplateResolver>();
+        services.AddScoped<IMessageTemplateAdminService, MessageTemplateAdminService>();
+        services.AddScoped<ISystemMessageSender, SystemMessageSender>();
         return services;
     }
 }

@@ -24,6 +24,7 @@
     <ProjectReference Include="..\..\src\BrighterTools.Messaging.MailKit\BrighterTools.Messaging.MailKit.csproj" />
     <ProjectReference Include="..\..\src\BrighterTools.Messaging.Postmark\BrighterTools.Messaging.Postmark.csproj" />
     <ProjectReference Include="..\..\src\BrighterTools.Messaging.Twilio\BrighterTools.Messaging.Twilio.csproj" />
+    <ProjectReference Include="..\..\src\BrighterTools.Messaging.SendGrid\BrighterTools.Messaging.SendGrid.csproj" />
   </ItemGroup>
   <PropertyGroup>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>

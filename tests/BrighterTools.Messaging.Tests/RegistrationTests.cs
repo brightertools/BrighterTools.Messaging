@@ -1,7 +1,8 @@
-﻿using BrighterTools.Messaging.Abstractions;
+using BrighterTools.Messaging.Abstractions;
 using BrighterTools.Messaging.DependencyInjection;
 using BrighterTools.Messaging.MailKit.DependencyInjection;
 using BrighterTools.Messaging.Postmark.DependencyInjection;
+using BrighterTools.Messaging.SendGrid.DependencyInjection;
 using BrighterTools.Messaging.Services;
 using BrighterTools.Messaging.Twilio.DependencyInjection;
 using FluentAssertions;
@@ -69,6 +70,25 @@ public class RegistrationTests
         provider.GetRequiredService<IEmailSender>().Should().NotBeNull();
     }
 
+    [Fact]
+    public void AddBrighterToolsSendGridEmailSender_RegistersEmailSender()
+    {
+        var configuration = new ConfigurationBuilder()
+            .AddInMemoryCollection(new Dictionary<string, string?>
+            {
+                ["SendGrid:ApiKey"] = "api-key",
+                ["Email:FromName"] = "System",
+                ["Email:FromAddress"] = "noreply@example.com"
+            })
+            .Build();
+
+        var services = new ServiceCollection();
+        services.AddBrighterToolsMessaging(configuration);
+        services.AddBrighterToolsSendGridEmailSender(configuration);
+
+        var provider = services.BuildServiceProvider();
+        provider.GetRequiredService<IEmailSender>().Should().NotBeNull();
+    }
     [Fact]
     public void AddBrighterToolsTwilioSmsSender_RegistersSmsSender()
     {
