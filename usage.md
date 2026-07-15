@@ -1,4 +1,4 @@
-﻿# BrighterTools.Messaging Usage
+# BrighterTools.Messaging Usage
 
 Install the core package:
 
@@ -18,7 +18,7 @@ dotnet add package BrighterTools.Messaging.Twilio
 Install the React companion package:
 
 ```powershell
-npm install brightertools-messaging-react
+npm install @brightertools/messaging-react
 ```
 
 `BrighterTools.Messaging` owns reusable email/SMS abstractions, template rendering, and notification orchestration. The host application owns template persistence, notification persistence, background dispatch scheduling, provider credentials, and business-specific message content.

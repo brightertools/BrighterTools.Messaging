@@ -1,4 +1,4 @@
-﻿# BrighterTools.Messaging
+# BrighterTools.Messaging
 
 `BrighterTools.Messaging` is a transport-agnostic messaging library for .NET applications with optional provider transports and a React companion package for template/message UI.
 
@@ -12,7 +12,7 @@ dotnet add package BrighterTools.Messaging.MailKit
 dotnet add package BrighterTools.Messaging.Postmark
 dotnet add package BrighterTools.Messaging.SendGrid
 dotnet add package BrighterTools.Messaging.Twilio
-npm install brightertools-messaging-react
+npm install @brightertools/messaging-react
 ```
 
 ## Repository Layout

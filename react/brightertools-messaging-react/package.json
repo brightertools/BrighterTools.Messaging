@@ -1,6 +1,6 @@
-﻿{
-  "name": "brightertools-messaging-react",
-  "version": "1.0.0",
+{
+  "name": "@brightertools/messaging-react",
+  "version": "1.0.1",
   "description": "React companion template and messaging UI components for BrighterTools.Messaging.",
   "license": "MIT-0",
   "type": "module",
@@ -15,8 +15,10 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
-    "test": "vitest run",
-    "pack:dry-run": "npm pack --dry-run"
+    "test": "vitest run --passWithNoTests",
+    "pack:dry-run": "npm pack --dry-run",
+    "prepack": "npm run build",
+    "verify:pack": "npm pack --dry-run"
   },
   "peerDependencies": {
     "react": "^18.0.0",
@@ -27,6 +29,7 @@
     "@testing-library/react": "^16.3.0",
     "@types/react": "^18.3.24",
     "@types/react-dom": "^18.3.7",
+    "jsdom": "^26.1.0",
     "typescript": "^5.8.3",
     "vitest": "^3.2.4"
   },

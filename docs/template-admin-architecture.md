@@ -1,4 +1,4 @@
-﻿# Message Template Administration Architecture
+# Message Template Administration Architecture
 
 ## Goal
 
@@ -327,7 +327,7 @@ The host controller should only handle:
 
 ## React Integration Contract
 
-`brightertools-messaging-react` should consume a small API client interface:
+`@brightertools/messaging-react` should consume a small API client interface:
 
 ```ts
 interface MessagingApiClient {
