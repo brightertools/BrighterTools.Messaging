@@ -12,3 +12,7 @@ coverage/
 *.suo
 *.nupkg
 *.snupkg
+
+react/brightertools-messaging-react/node_modules/
+react/brightertools-messaging-react/dist/
+react/brightertools-messaging-react/*.tgz

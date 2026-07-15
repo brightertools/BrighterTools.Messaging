@@ -1,16 +1,13 @@
-# v1.0.0 - Initial Release
+﻿# BrighterTools.Messaging Release Notes
 
-## Summary
+## 1.0.0
 
-Initial stable release of the package.
+Initial stable release.
 
-## Included
+Included:
 
-- Core package functionality.
-- Initial public API.
-- Documentation and usage examples.
-- NuGet packaging support.
-
-## Breaking Changes
-
-- None. This is the first stable release.
+- Core messaging abstractions and orchestration package.
+- MailKit, Postmark, SendGrid, and Twilio transport packages.
+- React companion messaging/template UI package.
+- NuGet and npm package metadata using the MIT-0 license.
+- CI package validation and trusted-publishing workflows.

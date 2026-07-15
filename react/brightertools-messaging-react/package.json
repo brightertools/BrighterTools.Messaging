@@ -1,10 +1,22 @@
 ﻿{
   "name": "brightertools-messaging-react",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "React companion template and messaging UI components for BrighterTools.Messaging.",
+  "license": "MIT-0",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrighterTools/BrighterTools.Messaging.git",
+    "directory": "react/brightertools-messaging-react"
+  },
+  "homepage": "https://github.com/BrighterTools/BrighterTools.Messaging#readme",
+  "bugs": {
+    "url": "https://github.com/BrighterTools/BrighterTools.Messaging/issues"
+  },
   "scripts": {
-    "test": "vitest run"
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "pack:dry-run": "npm pack --dry-run"
   },
   "peerDependencies": {
     "react": "^18.0.0",
@@ -18,10 +30,20 @@
     "typescript": "^5.8.3",
     "vitest": "^3.2.4"
   },
-  "main": "./src/index.ts",
-  "module": "./src/index.ts",
-  "types": "./src/index.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./src/index.ts"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
   }
 }
