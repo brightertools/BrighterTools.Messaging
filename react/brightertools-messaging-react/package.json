@@ -6,7 +6,7 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BrighterTools/BrighterTools.Messaging.git",
+    "url": "git+https://github.com/brightertools/BrighterTools.Messaging.git",
     "directory": "react/brightertools-messaging-react"
   },
   "homepage": "https://github.com/BrighterTools/BrighterTools.Messaging#readme",
