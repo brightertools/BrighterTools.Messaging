@@ -22,15 +22,8 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <VersionPrefix>1.0.1</VersionPrefix>
-    <PackageReleaseNotes>v1.0.1 - React package scope and publishing updates
-
-Included:
-- Prepared the React companion package for scoped npm publishing as @brightertools/messaging-react.
-- Aligned NuGet and npm publishing metadata for the 1.0.1 patch release.
-
-Breaking changes:
-- None.</PackageReleaseNotes>
+    <VersionPrefix>1.1.0</VersionPrefix>
+    <PackageReleaseNotes>v1.1.0 - Update .NET 10 dependencies, email providers, Polly 8.8.0 and Twilio 8.0.1. BrighterTools APIs unchanged. Hosts directly referencing provider SDKs must align their versions. SQL Server defaults unchanged.</PackageReleaseNotes>
   </PropertyGroup>
   <PropertyGroup Condition="'$(IsTestProject)' == 'true'">
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
