@@ -18,5 +18,10 @@ public class PostmarkEmailSenderOptions
     /// Gets or sets the Track Opens.
     /// </summary>
     public bool TrackOpens { get; set; } = true;
+    /// <summary>
+    /// Retains the historical four exponential-backoff retries by default. Set false when
+    /// the host owns a durable queue; a timeout may already have delivered the message.
+    /// </summary>
+    public bool EnableAutomaticRetries { get; set; } = true;
 }
 
