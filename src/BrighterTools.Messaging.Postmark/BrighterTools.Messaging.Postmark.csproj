@@ -1,6 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
+    <Version>1.2.0</Version>
+    <PackageReleaseNotes>Opt-out automatic retries and explicit Postmark rejection classification for hosts with durable queues; default retry behaviour retained.</PackageReleaseNotes>
     <PackageId>BrighterTools.Messaging.Postmark</PackageId>
     <Title>BrighterTools.Messaging.Postmark</Title>
     <RootNamespace>BrighterTools.Messaging.Postmark</RootNamespace>
@@ -9,7 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BrighterTools.Messaging\BrighterTools.Messaging.csproj" />
+    <PackageReference Include="BrighterTools.Messaging" Version="1.1.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,6 +24,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.404" PrivateAssets="all" />
+    <None Include="../../LICENSE" Pack="true" PackagePath="/" />
     <None Include="README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 </Project>
